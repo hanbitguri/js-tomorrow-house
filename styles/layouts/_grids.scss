@@ -30,7 +30,6 @@ $sm-columns: 4;
 $sm-margin: 5px;
 
 $md-breakpoint: 768px;
-
 $md-columns: 12;
 $md-margin: 30px;
 $md-max-container: 960px + $md-margin * 2;
@@ -64,7 +63,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     max-width: $md-max-container;
     padding: 0 $md-margin;
     @for $i from 1 through $md-columns {
-      .col-sm-#{$i} {
+      .col-md-#{$i} {
         width: percentage($i / $md-columns);
       }
     }
@@ -73,7 +72,7 @@ $lg-max-container: ($lg-unit + $gutter) * $lg-columns;
     max-width: $lg-max-container;
     padding: 0;
     @for $i from 1 through $lg-columns {
-      .col-sm-#{$i} {
+      .col-lg-#{$i} {
         width: ($lg-unit + $gutter) * $i;
       }
     }
