@@ -1,0 +1,23 @@
+%avatar-base {
+  display: block; // 위드하이트 재단과정에서 div라는 보장이없음
+  // 앵커나 스트롱같은 인라인을 만나면 다깨지니까 안전빵 블럭
+  overflow: hidden;
+  border-radius: 50%;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.avatar-32 {
+  @extend %avatar-base;
+  width: 32px;
+  height: 32px;
+}
+.avatar-24 {
+  @extend %avatar-base;
+  width: 24px;
+  height: 24px;
+}
