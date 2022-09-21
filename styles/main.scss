@@ -5,6 +5,8 @@
 @import './base/nomalize';
 @import './base/reset';
 @import './layouts/grids';
+@import './mixins/text-style';
+
 * {
   font-family: 'Noto Sans KR', sans-serif;
 }
