@@ -2,9 +2,14 @@
 @import './constants/typography';
 
 @import './base/_fonts';
+@import './mixins/responsive';
+
 @import './base/nomalize';
+@import './constants/breakpoint';
+
 @import './base/reset';
 @import './layouts/grids';
+
 @import './mixins/text-style';
 
 * {
