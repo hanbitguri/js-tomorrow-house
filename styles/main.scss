@@ -1,3 +1,4 @@
+@import './constants/breakpoint';
 @import './base/globals';
 @import './constants/colors';
 
@@ -7,7 +8,6 @@
 @import './mixins/responsive';
 
 @import './base/nomalize';
-@import './constants/breakpoint';
 
 @import './base/reset';
 @import './layouts/grids';
@@ -22,6 +22,7 @@
 @import './modules/buttons';
 @import './modules/forms';
 @import './modules/paginations';
+@import './modules/icons';
 
 * {
   font-family: 'Noto Sans KR', sans-serif;
