@@ -1,4 +1,6 @@
+@import './base/globals';
 @import './constants/colors';
+
 @import './constants/typography';
 
 @import './base/_fonts';
@@ -20,6 +22,7 @@
 @import './modules/buttons';
 @import './modules/forms';
 @import './modules/paginations';
+
 * {
   font-family: 'Noto Sans KR', sans-serif;
 }
