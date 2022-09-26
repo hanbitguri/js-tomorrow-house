@@ -38,4 +38,11 @@
     height: 50px;
     @include flexbox(between);
   }
+  @include responsive(T) {
+    // 768px 이상 !
+    .logo {
+      position: static;
+      transform: none;
+    }
+  }
 }
