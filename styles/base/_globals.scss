@@ -30,7 +30,7 @@
   }
 }
 .sm-hidden {
-  @media screen and (min-width: $md-breakpoint) {
+  @media screen and (max-width: $md-breakpoint) {
     display: none !important;
   }
 }
