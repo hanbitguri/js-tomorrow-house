@@ -28,6 +28,7 @@
   }
   @include responsive(T) {
     // 768px 이상 !
+
     .logo {
       position: static;
       transform: none;
@@ -43,6 +44,20 @@
       @include flexbox(end);
       .button-group {
         margin-right: 24px;
+        .gnb-auth {
+          margin-left: 8px;
+          a {
+            @include text-style(14);
+            color: $primary-second;
+            font-weight: 700;
+            &:first-child {
+              margin-right: 12px;
+            }
+            &:hover {
+              color: $blue;
+            }
+          }
+        }
         .gnb-icon-button {
           margin-right: 8px;
           &:last-child {
