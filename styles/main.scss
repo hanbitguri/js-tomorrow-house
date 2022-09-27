@@ -1,7 +1,7 @@
 @import './constants/breakpoint';
 @import './base/globals';
 @import './constants/colors';
-
+@import './constants/box-shadows';
 @import './constants/typography';
 
 @import './base/_fonts';
@@ -26,6 +26,7 @@
 @import './components/gnb-nav';
 @import './layouts/gnb';
 @import './components/gnb-icon-buttons';
+@import './components/my-menu';
 
 * {
   font-family: 'Noto Sans KR', sans-serif;
