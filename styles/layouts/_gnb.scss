@@ -35,7 +35,7 @@
     }
   }
   .gnb-wrapper {
-    height: 50px;
+    height: 80px;
     @include flexbox(between);
   }
   @include responsive(T) {
@@ -43,6 +43,39 @@
     .logo {
       position: static;
       transform: none;
+      margin-right: 32px;
+      img {
+        height: 24px;
+      }
+    }
+    .gnb-left {
+      @include flexbox(start);
+    }
+    .gnb-right {
+      @include flexbox(end);
+      .button-group {
+        margin-right: 24px;
+        .gnb-icon-button {
+          margin-right: 8px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .btn-primary {
+        width: 88px;
+        i {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+  @include responsive(D) {
+    .gnb-right {
+      .input-group {
+        width: 264px;
+        margin-right: 24px;
+      }
     }
   }
 }
