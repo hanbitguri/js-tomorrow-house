@@ -13,25 +13,13 @@
       height: 20px;
     }
   }
-  .gnb-icon-button {
-    @include flexbox;
-    width: 32px;
-    height: 32px;
-    font-size: 24px;
-    color: $primary-second;
-    i {
-    }
-  }
-  .gnb-menu-button {
-    color: $blue;
-  }
 
   .gnb-right {
     .button-group {
       @include flexbox(end);
     }
-    .gnb-search-button {
-      padding-right: 4px;
+    .gnb-icon-button.is-search {
+      margin-right: 4px;
     }
   }
   .gnb-wrapper {
