@@ -10,21 +10,24 @@
   &.is-store {
     &.is-open {
       .drawer-menu-content {
-        max-height: _calculate-max-content-height($store-menu-item-length);
+        max-height: _calculate-max-content-height($store-menu-item-length) +
+          $drawer-menu-item-padding;
       }
     }
   }
   &.is-community {
     &.is-open {
       .drawer-menu-content {
-        max-height: _calculate-max-content-height($community-menu-item-length);
+        max-height: _calculate-max-content-height($community-menu-item-length) +
+          $drawer-menu-item-padding;
       }
     }
   }
   &.is-expert {
     &.is-open {
       .drawer-menu-content {
-        max-height: _calculate-max-content-height($expert-menu-item-length);
+        max-height: _calculate-max-content-height($expert-menu-item-length) +
+          $drawer-menu-item-padding;
       }
     }
   }
@@ -70,8 +73,6 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 200ms ease-in-out;
-  }
-  &-list {
   }
   &-item {
     &.is-active {
