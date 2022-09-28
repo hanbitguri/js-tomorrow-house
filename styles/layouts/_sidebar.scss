@@ -1,14 +1,20 @@
 .sidebar {
+  $sidebar-width: 240px;
   z-index: $sidebar-level;
   position: fixed;
   top: 0;
   left: 0;
-  width: 240px;
+  width: $sidebar-width;
   height: 100vh;
   overflow-y: auto;
   padding: 32px 20px;
   background-color: $white;
   overscroll-behavior: contain; //  사이드바 맨아래로 내리고 더 내리면 뒤에있는 스크롤 안넘어감 <
+  transform: translate3d(-($sidebar-width), 0, 0);
+  transition: transform 300ms ease-in-out;
+  &.is-active {
+    transform: translate3d(0, 0, 0);
+  }
   &-user-menu {
     margin-top: 16px;
     .user-menu-list {

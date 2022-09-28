@@ -1,4 +1,7 @@
 .overlay {
+  opacity: 0;
+  visibility: hidden; // 존재유무
+  transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out; // 같이줌 opacity 는 투명도라 뒷화면 클릭 안됨
   position: fixed;
   top: 0;
   left: 0;
@@ -6,4 +9,8 @@
   height: 100vh;
   background-color: rgba($primary-first, 0.5);
   z-index: $overlay-level;
+  &.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
