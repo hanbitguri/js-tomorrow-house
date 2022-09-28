@@ -49,3 +49,26 @@
       </div>
   </div>
 ```
+
+- 로그인 하지 않은 경우
+
+```html
+<div class="sidebar-auth">
+  <a href="/" class="btn-outlined btn-40">로그인</a>
+  <a href="/" class="btn-primary btn-40">회원가입</a>
+</div>
+```
+
+- 로그인 한 경우
+
+```html
+<div class="sidebar-user">
+  <a href="/">
+    <div class="avatar-24">
+      <!-- 유저 이미지 렌더가 안되었을 경우 -->
+      <!-- <img src="./assets/images/img-user-03.jpg" alt="사딸라아저씨" /> -->
+    </div>
+    <strong class="username">사딸라사딸라사딸라사딸라사딸라</strong>
+  </a>
+</div>
+```
