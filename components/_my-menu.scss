@@ -4,6 +4,10 @@
   position: relative;
 
   &-button {
+    background-image: url(/assets/images/img-user-default.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
     width: $button-size;
     height: $button-size;
     overflow: hidden;
