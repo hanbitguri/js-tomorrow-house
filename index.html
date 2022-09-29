@@ -76,14 +76,51 @@
               </div>
 
               <div class="gnb-right">
-                <div class="input-group lg-only">
-                  <i class="ic-search" aria-hidden></i>
-                  <input
-                    type="text"
-                    placeholder="스토어 검색"
-                    class="form-input"
-                  />
+                <div class="gnb-search">
+                  <div class="input-group lg-only">
+                    <i class="ic-search" aria-hidden></i>
+                    <input
+                      type="text"
+                      placeholder="스토어 검색"
+                      class="form-input"
+                    />
+                  </div>
+                  <!-- 데스크탑 서치모달 -->
+                  <section class="search-history lg-only">
+                    <header class="search-history-header">
+                      <h2 class="title">최근검색어</h2>
+                      <button type="button">전체삭제</button>
+                    </header>
+                    <!--최근검색이 있을경우 -->
+                    <div class="search-history-content">
+                      <ol class="search-history-list">
+                        <li class="search-history-item">
+                          <button type="button" class="search-word">
+                            전한빛</button
+                          ><button type="button" class="delete-button">
+                            <i class="ic-close" aria-label="검색어 삭제"></i>
+                          </button>
+                        </li>
+                        <li class="search-history-item">
+                          <button type="button" class="search-word">
+                            최근검색어</button
+                          ><button type="button" class="delete-button">
+                            <i class="ic-close" aria-label="검색어 삭제"></i>
+                          </button>
+                        </li>
+                        <li class="search-history-item">
+                          <button type="button" class="search-word">
+                            최근검색어최근검색어최근검색어최근검색어</button
+                          ><button type="button" class="delete-button">
+                            <i class="ic-close" aria-label="검색어 삭제"></i>
+                          </button>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
                 </div>
+                <!-- 데스크탑 서치모달 -->
+
                 <!-- 로그인 하지 않았을 경우 -->
                 <!-- <div class="button-group">
 
@@ -276,8 +313,8 @@
                 <h2 class="title">최근검색어</h2>
                 <button type="button">전체삭제</button>
               </header>
-              <!-- 최근검색이 있을경우 -->
-              <!-- <div class="search-history-content">
+              <!--최근검색이 있을경우 -->
+              <div class="search-history-content">
                 <ol class="search-history-list">
                   <li class="search-history-item">
                     <button type="button" class="search-word">전한빛</button
@@ -299,11 +336,11 @@
                     </button>
                   </li>
                 </ol>
-              </div> -->
-              <!-- 최근검색이 없는경우 -->
-              <div class="search-history-content">
-                <p class="placeholder">최근 검색한 내역이 없습니다.</p>
               </div>
+              <!-- 최근검색이 없는경우 -->
+              <!-- <div class="search-history-content">
+                <p class="placeholder">최근 검색한 내역이 없습니다.</p>
+              </div> -->
             </section>
           </div>
         </div>

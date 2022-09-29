@@ -23,6 +23,11 @@
     }
     .search-history-list {
       .search-history-item {
+        transition: background-color 200ms ease-in-out;
+        border-radius: 2px;
+        &:hover {
+          background-color: $background;
+        }
         position: relative;
         @include flexbox(between);
         .search-word {
@@ -33,13 +38,16 @@
           text-align: left;
         }
         .delete-button {
+          &:hover {
+            color: $primary-first;
+          }
           @include flexbox;
           position: absolute;
           top: 6px;
           right: 0;
           width: $close-button-size;
           height: $close-button-size;
-          font-size: 16;
+          font-size: 16px;
           color: $primary-third;
         }
       }
