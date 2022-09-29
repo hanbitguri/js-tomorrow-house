@@ -21,13 +21,4 @@
       }
     }
   }
-  .search-history {
-    &-header {
-      .title {
-      }
-      @include text-style(13, $primary-second);
-      font-weight: 400;
-      @include flexbox(between);
-    }
-  }
 }

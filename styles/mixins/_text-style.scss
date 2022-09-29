@@ -51,7 +51,3 @@
     color: $color;
   }
 }
-
-p {
-  @include text-style(12, red);
-}
