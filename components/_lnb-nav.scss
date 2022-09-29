@@ -1,0 +1,37 @@
+.lnb {
+  border-bottom: 1px solid $border;
+
+  .lnb-menu {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .lnb-menu-list {
+      @include flexbox(start);
+
+      overflow: scroll;
+      .lnb-menu-item {
+        .ic-new {
+          color: $red;
+        }
+        &.is-active {
+          a {
+            color: $blue;
+          }
+
+          border-bottom: 2px solid $blue;
+        }
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        height: 40px;
+        white-space: nowrap;
+        a {
+          @include text-style(13, $primary-first);
+          font-weight: 700;
+          padding: 10px 8px;
+        }
+      }
+    }
+  }
+}
