@@ -50,6 +50,8 @@
   </div>
 ```
 
+### 2. Side-bar
+
 - 로그인 하지 않은 경우
 
 ```html
@@ -71,4 +73,46 @@
     <strong class="username">사딸라사딸라사딸라사딸라사딸라</strong>
   </a>
 </div>
+```
+
+### 3. Search-modal
+
+- 최근 검색어가 있을 경우
+
+```html
+<div class="search-history-content">
+  <ol class="search-history-list">
+    <li class="search-history-item">
+      <button type="button" class="search-word">전한빛</button
+      ><button type="button" class="delete-button">
+        <i class="ic-close" aria-label="검색어 삭제"></i>
+      </button>
+    </li>
+    <li class="search-history-item">
+      <button type="button" class="search-word">최근검색어</button
+      ><button type="button" class="delete-button">
+        <i class="ic-close" aria-label="검색어 삭제"></i>
+      </button>
+    </li>
+    <li class="search-history-item">
+      <button type="button" class="search-word">
+        최근검색어최근검색어최근검색어최근검색어</button
+      ><button type="button" class="delete-button">
+        <i class="ic-close" aria-label="검색어 삭제"></i>
+      </button>
+    </li>
+  </ol>
+</div>
+```
+
+- 최근 검색어가 없을 경우
+
+```html
+ <div class="search-history-content">
+                <p class="placeholder">최근 검색한 내역이 없습니다.</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
 ```
