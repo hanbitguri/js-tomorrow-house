@@ -1,36 +1,33 @@
 .lnb {
-  border-bottom: 1px solid $border;
-
-  .lnb-menu {
-    ::-webkit-scrollbar {
-      display: none;
+  overflow-x: auto; // 기준점 320
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &-menu-list {
+    position: relative;
+    left: -8px;
+    //width: max-content; // 터져나가는 요소 320오버
+    // 자식에서 나올수있는 가장긴 위드로 * n개 합쳐라 !!
+    //블럭 : 부모 컨텐트 100% 인라인블럭 : 지꺼 컨텐트 100%
+    @include inline-flexbox(start);
+    white-space: nowrap; // 인라인요소<< 한줄유지해
+  }
+  &-menu-item {
+    // flex-shrink: 0; // 너의 크기를 줄이지마
+    &.is-active {
+      a {
+        color: $blue;
+        border-bottom: 2px solid $blue;
+      }
     }
-    .lnb-menu-list {
-      @include flexbox(start);
-
-      overflow: scroll;
-      .lnb-menu-item {
-        .ic-new {
-          color: $red;
-        }
-        &.is-active {
-          a {
-            color: $blue;
-          }
-
-          border-bottom: 2px solid $blue;
-        }
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        height: 40px;
-        white-space: nowrap;
-        a {
-          @include text-style(13, $primary-first);
-          font-weight: 700;
-          padding: 10px 8px;
-        }
+    a {
+      height: 40px;
+      padding: 0 8px;
+      @include text-style(13, $dark);
+      @include inline-flexbox; // 인라인성격 플렉스
+      font-weight: 700;
+      .ic-new {
+        color: $red;
       }
     }
   }
