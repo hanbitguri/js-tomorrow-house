@@ -3,9 +3,7 @@
   $grid-margin: $sm-margin * $gutter/2;
   overflow-x: auto; // 기준점 320
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
+  @include noscrollbar;
   &-menu-list {
     height: 40px;
     border-bottom: 1px solid $border;
