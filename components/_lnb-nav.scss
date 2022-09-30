@@ -1,10 +1,16 @@
 .lnb {
+  $lnb-link-padding: 8px;
+  $grid-margin: $sm-margin * $gutter/2;
   overflow-x: auto; // 기준점 320
+
   &::-webkit-scrollbar {
     display: none;
   }
   &-menu-list {
-    position: relative;
+    height: 40px;
+    border-bottom: 1px solid $border;
+    margin-left: -15px;
+    padding: 0 7px;
     left: -8px;
     //width: max-content; // 터져나가는 요소 320오버
     // 자식에서 나올수있는 가장긴 위드로 * n개 합쳐라 !!
@@ -17,18 +23,16 @@
     &.is-active {
       a {
         color: $blue;
-        border-bottom: 2px solid $blue;
+        border-bottom-color: $blue;
       }
     }
     a {
       height: 40px;
-      padding: 0 8px;
+      padding: 0 $lnb-link-padding;
       @include text-style(13, $dark);
       @include inline-flexbox; // 인라인성격 플렉스
       font-weight: 700;
-      .ic-new {
-        color: $red;
-      }
+      border-bottom: 2px solid transparent;
     }
   }
 }
