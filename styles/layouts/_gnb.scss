@@ -1,6 +1,7 @@
 .gnb {
   position: relative;
   border-bottom: 1px solid $border;
+  background-color: $white;
 
   .logo {
     @include pos-center;
@@ -23,12 +24,15 @@
     }
   }
   .gnb-wrapper {
-    height: 80px;
+    height: $gnb-height-sm - 1px;
     @include flexbox(between);
   }
   @include responsive(T) {
     // 768px 이상 !
-
+    .gnb-wrapper {
+      height: $gnb-height-md;
+      @include flexbox(between);
+    }
     .logo {
       position: static;
       transform: none;
