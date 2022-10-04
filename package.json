@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/hanbitguri/tomorrow-house#readme",
   "dependencies": {
-    "node-sass": "^7.0.3"
+    "node-sass": "^7.0.3",
+    "tiny-slider": "^2.9.4"
   }
 }
