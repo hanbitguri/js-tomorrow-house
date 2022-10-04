@@ -1,3 +1,4 @@
+@import './constants/demension';
 @import './constants/breakpoint';
 @import './constants/zindex';
 @import './base/globals';
@@ -34,6 +35,7 @@
 @import './layouts/search-modal';
 @import './components/search-history';
 @import './components/lnb-nav';
+@import './layouts/globalheader';
 @import './layouts/globalfooter';
 * {
   font-family: 'Noto Sans KR', sans-serif;
