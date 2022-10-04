@@ -15,6 +15,7 @@
     z-index: $lnb-level;
   }
   @include responsive(T) {
+    height: $gnb-height-md + $lnb-height-md;
     .lnb {
       top: $gnb-height-md + 1px;
     }
