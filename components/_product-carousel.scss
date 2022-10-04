@@ -39,4 +39,48 @@
       }
     }
   }
+  @include responsive(T) {
+    padding-right: 30px;
+
+    &-slider {
+      margin: 0;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .thumbnail-list {
+      position: static;
+      transform: none;
+      justify-content: start;
+    }
+    .thumbnail-item {
+      &.tns-nav-active {
+        button {
+          border: 2px solid $blue;
+        }
+      }
+      margin: 0 8px 0 0;
+      button {
+        @include flexbox;
+
+        opacity: 1;
+        width: 56px;
+        height: 56px;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      img {
+        width: 56px;
+        height: 56px;
+        display: block;
+      }
+      &.tns-nav-active {
+        button {
+          width: 56px;
+          height: 56px;
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
