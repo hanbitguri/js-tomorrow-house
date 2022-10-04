@@ -1,10 +1,42 @@
 .product-carousel {
+  $grid-margin: -15px;
+  position: relative;
+  &-slider {
+    margin: 0 $grid-margin;
+  }
   img {
     width: 100%;
     height: auto;
   }
 
   &-thumbnail {
-    display: none;
+    .thumbnail {
+      &-list {
+        @include pos-center-x;
+        @include flexbox;
+        bottom: 16px;
+      }
+      &-item {
+        &.tns-nav-active {
+          button {
+            width: 8px;
+            height: 8px;
+            opacity: 1;
+          }
+        }
+        margin: 0 4px;
+        @include flexbox;
+        button {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: $white;
+          opacity: 0.7;
+        }
+        img {
+          display: none;
+        }
+      }
+    }
   }
 }
