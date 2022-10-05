@@ -1,0 +1,42 @@
+.product-section-header {
+  @include flexbox(start);
+  position: relative;
+  height: 64px;
+  background-color: $white;
+  .title {
+    @include text-style(16, $dark);
+    font-weight: 700; // 헤딩태그는 기본이 700임
+    .badge {
+      @include text-style(16, $blue);
+      font-weight: 700;
+      margin-left: 8px;
+    }
+  }
+  .text-button {
+    @include text-style(14, $blue);
+    font-weight: 700;
+    @include pos-center-y;
+    right: 0;
+  }
+  .icon-button {
+    font-size: 22px;
+    color: $primary-second;
+    @include pos-center-y;
+    right: 0;
+    &.right {
+      transform: translateY(-50%) rotate(-90deg);
+    }
+  }
+
+  @include responsive(T) {
+    .title {
+      @include text-style(18);
+      .badge {
+        @include text-style(18);
+      }
+    }
+    .text-button {
+      @include text-style(16);
+    }
+  }
+}
