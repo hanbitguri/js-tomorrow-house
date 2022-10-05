@@ -64,6 +64,8 @@
     }
   }
   .product-info-delivery {
+    @include text-style(16, $primary-first);
+    font-weight: 400;
     border-top: 1px solid $border;
     padding-top: 12px;
     span {
@@ -93,8 +95,34 @@
       }
     }
     .product-info-price {
-      .discount-rate {
-        @include flexbox(start);
+      .info-price-wrapper {
+        margin-bottom: 12px;
+        @include flexbox(start, end);
+        .discount-rate {
+          margin-right: 16px;
+          .rate {
+            font-size: 44px;
+            line-height: 36px;
+            color: $blue;
+            font-weight: 700;
+            font-family: $font-price;
+            margin-right: 2px;
+          }
+          .percent {
+            font-size: 20px;
+            color: $blue;
+            font-weight: 700;
+            font-family: $font-main;
+          }
+        }
+        .info-price {
+          .info-sale-price {
+            @include flexbox;
+            .currency {
+              margin-right: 8px;
+            }
+          }
+        }
       }
     }
 
