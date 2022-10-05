@@ -1,0 +1,82 @@
+.order-checkout {
+  border-radius: 4px;
+  background-color: $background;
+  padding: 8px 10px 8px 12px;
+  margin-bottom: 12px;
+  .checkout-list {
+    .checkout-item {
+      .checkout-card {
+        position: relative;
+        .checkout-header {
+          margin-bottom: 8px;
+          @include flexbox(between);
+          .checkout-title {
+            @include text-style(13, $primary-first);
+            font-weight: 400;
+            padding-right: 36px - 10px;
+          }
+          .delete-button {
+            @include inline-flexbox;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            font-size: 20px;
+            color: $primary-second;
+          }
+        }
+        .checkout-footer {
+          @include flexbox(between);
+          .checkout-select {
+            position: relative;
+            @include text-style(14, $primary-first);
+            font-weight: 400;
+            line-height: 22px;
+            background-color: $white;
+            border: 1px solid $border;
+            width: 72px;
+            height: 24px;
+            border-radius: 3px;
+            padding: 0 8px;
+            i {
+              font-size: 20px;
+              color: $primary-third;
+              @include pos-center-y;
+            }
+          }
+          .amount {
+            font-family: $font-price;
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(D) {
+    .checkout-list {
+      .checkout-item {
+        .checkout-card {
+          .checkout-header {
+            .checkout-title {
+              @include text-style(16);
+            }
+            .delete-button:hover {
+              opacity: 0.4;
+            }
+          }
+          .checkout-footer {
+            .checkout-select:hover {
+              border-color: $primary-third;
+              transition: border-color 200ms ease-in-out;
+              i {
+                color: $primary-third;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
