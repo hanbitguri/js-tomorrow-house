@@ -5,7 +5,7 @@
 @import './constants/colors';
 @import './constants/box-shadows';
 @import './constants/typography';
-
+@import './mixins/star-rating';
 @import './base/_fonts';
 @import './mixins/responsive';
 @import './mixins/scrollbar';
@@ -39,6 +39,7 @@
 @import './layouts/globalfooter';
 @import './components/breadcrumb';
 @import './components/product-carousel';
+@import './components/product-info';
 
 * {
   font-family: 'Noto Sans KR', sans-serif;
