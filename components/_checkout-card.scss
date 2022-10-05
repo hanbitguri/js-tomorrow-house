@@ -3,6 +3,9 @@
   background-color: $background;
   padding: 8px 10px 8px 12px;
   margin-bottom: 12px;
+  &:last-child {
+    margin-bottom: 0px;
+  }
   .checkout-list {
     .checkout-item {
       .checkout-card {
