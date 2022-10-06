@@ -46,4 +46,9 @@
       height: 54px;
     }
   }
+  @include responsive(D) {
+    button:hover {
+      color: $blue;
+    }
+  }
 }
