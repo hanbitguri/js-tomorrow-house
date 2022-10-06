@@ -1,0 +1,33 @@
+.product-tab {
+  width: 100%;
+  height: 40px;
+  background-color: $white;
+  &-list {
+    // 별로도 width 값 ㄴㄴ -> 마이너스 마진주면 늘어남
+    @include flexbox;
+    margin: 0 -15px;
+  }
+  &-item {
+    width: (100% / 5);
+    .badge {
+      color: $primary-second;
+      margin-left: 4px;
+    }
+  }
+  button {
+    border-bottom: 1px solid $border;
+    @include text-style(13, $dark);
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+    @include flexbox;
+    white-space: nowrap;
+    &:active {
+      color: $blue;
+    }
+    &.is-active {
+      color: $blue;
+      border-bottom: 2px solid $blue;
+    }
+  }
+}
