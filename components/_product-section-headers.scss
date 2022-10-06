@@ -14,17 +14,30 @@
   }
   .text-button {
     @include text-style(14, $blue);
+    padding: 15px;
+    right: -15px;
     font-weight: 700;
     @include pos-center-y;
-    right: 0;
+    &:active {
+      opacity: 0.4;
+    }
   }
+
   .icon-button {
+    @include flexbox;
+
     font-size: 22px;
+    width: 22px + (15px * 2);
+    height: 22px + (15px * 2);
+    right: -15px;
     color: $primary-second;
     @include pos-center-y;
-    right: 0;
+
     &.right {
       transform: translateY(-50%) rotate(-90deg);
+    }
+    &:active {
+      opacity: 0.4;
     }
   }
 
@@ -37,6 +50,9 @@
     }
     .text-button {
       @include text-style(16);
+      &:hover {
+        opacity: 0.4;
+      }
     }
   }
 }
