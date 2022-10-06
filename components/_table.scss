@@ -1,0 +1,37 @@
+$table-cell-padding: 12px;
+$table-th-sm-width: 100px;
+$table-th-md-width: 140px;
+.product-table {
+  // 무조건 선언
+  table-layout: fixed; // 테이블 사이즈 고정
+  border-collapse: collapse; // 열 선 안겹침
+  width: 100%;
+
+  th,
+  td {
+    padding: $table-cell-padding;
+  }
+  tr {
+    @include text-style(12, $primary-first);
+    text-align: left;
+    border: 1px solid $border;
+    vertical-align: top; //위 쪽 정렬
+  }
+  th {
+    font-weight: 400;
+    color: $primary-second;
+    width: $table-th-sm-width + $table-cell-padding;
+  }
+  td {
+    padding-left: 0;
+  }
+
+  @include responsive(T) {
+    tr {
+      @include text-style(14);
+    }
+    th {
+      width: $table-th-md-width + ($table-cell-padding * 2);
+    }
+  }
+}
