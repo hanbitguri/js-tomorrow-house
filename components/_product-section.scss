@@ -7,9 +7,15 @@
     max-width: 692px;
     margin-left: auto;
     margin-right: auto;
+    .product-table {
+      margin-top: 40px;
+    }
   }
   @include responsive(D) {
     margin-left: 0;
+  }
+  .product-table {
+    margin-top: 20px;
   }
 }
 .product-divider {

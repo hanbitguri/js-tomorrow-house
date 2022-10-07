@@ -14,7 +14,7 @@ $table-th-md-width: 140px;
   tr {
     @include text-style(12, $primary-first);
     text-align: left;
-    border: 1px solid $border;
+    border-bottom: 1px solid $border;
     vertical-align: top; //위 쪽 정렬
   }
   th {
