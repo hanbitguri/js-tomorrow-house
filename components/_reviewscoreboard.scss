@@ -1,0 +1,60 @@
+.review-score {
+  @include flexbox;
+  position: relative;
+  background-color: $background;
+  width: 100%;
+  border-radius: 4px;
+  height: 152px;
+  .score-sumary,
+  .score-detail {
+    width: 50%;
+  }
+  .score-sumary {
+    @include flexbox;
+    flex-direction: column;
+    order: 1;
+    .average-score {
+      display: block;
+      @include text-style(24, $dark);
+      margin-bottom: 4px;
+    }
+    .star-rating {
+      @include star-rating(20);
+    }
+  }
+  .score-detail {
+    text-align: center;
+    order: 3;
+  }
+  @include responsive(T) {
+    padding: 0 72px;
+    height: 148px;
+    .score-sumary,
+    .score-detail {
+      width: auto;
+    }
+    .score-sumary {
+      flex-direction: row-reverse;
+      .star-rating {
+        font-size: 24px;
+        margin-right: 16px;
+      }
+      .average-score {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+.review-score::before {
+  order: 2;
+
+  display: block;
+  content: '';
+  width: 1px;
+  height: 96px;
+  background-color: $border;
+  @include responsive(T) {
+    height: 72px;
+    margin: 0 69px;
+  }
+}
