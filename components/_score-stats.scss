@@ -32,10 +32,11 @@
           margin-right: 4px;
           overflow: hidden;
           .active-bar {
-            width: 30px;
+            width: 0;
             height: 5px;
             background-color: $blue;
             border-radius: (5px / 2);
+            animation: bar-animation 1000ms;
           }
         }
       }
@@ -55,5 +56,15 @@
         }
       }
     }
+  }
+}
+
+@keyframes bar-animation {
+  // 궁합 : translate3D 추천
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
   }
 }
