@@ -1,9 +1,13 @@
 .product-spec {
+  padding-top: 20px;
   figure {
     img {
       display: block;
       width: 100%;
       height: auto;
     }
+  }
+  .button-wrapper {
+    display: none;
   }
 }
