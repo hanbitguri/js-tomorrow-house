@@ -6,11 +6,11 @@
   .title {
     @include text-style(16, $dark);
     font-weight: 700; // 헤딩태그는 기본이 700임
-    .badge {
-      @include text-style(16, $blue);
-      font-weight: 700;
-      margin-left: 8px;
-    }
+  }
+  .badge {
+    @include text-style(16, $blue);
+    font-weight: 700;
+    margin-left: 8px;
   }
   .text-button {
     @include text-style(14, $blue);
@@ -44,9 +44,9 @@
   @include responsive(T) {
     .title {
       @include text-style(18);
-      .badge {
-        @include text-style(18);
-      }
+    }
+    .badge {
+      @include text-style(18);
     }
     .text-button {
       @include text-style(16);
