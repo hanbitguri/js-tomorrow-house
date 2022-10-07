@@ -7,4 +7,18 @@
       border: 0;
     }
   }
+  .review-empty {
+    padding: 36px 0;
+    text-align: center;
+    @include text-style(16, $dark);
+    font-weight: 400;
+    strong {
+      color: $blue;
+    }
+  }
+  @include responsive(T) {
+    .review-empty {
+      padding: 12px 0;
+    }
+  }
 }
