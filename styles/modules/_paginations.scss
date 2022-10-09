@@ -9,6 +9,7 @@
 }
 
 .pagination {
+  padding-bottom: 20px;
   @include flexbox;
   .page-control {
     @extend %page-item-base;

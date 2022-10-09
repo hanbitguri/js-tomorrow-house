@@ -1,4 +1,15 @@
 .product-qa {
+  .qa-empty {
+    padding: 48px 0;
+    @include flexbox;
+    @include text-style(16, $primary-second);
+    text-align: center;
+  }
+  @include responsive(T) {
+    .qa-empty {
+      padding: 20px 0;
+    }
+  }
   @include mobile-only {
     padding-bottom: 0;
 
