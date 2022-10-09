@@ -32,6 +32,21 @@
   }
   .qa-card-body {
     .qa-content {
+      &:first-child:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+    .qa-content,
+    .qa-content-answer {
+      .seller {
+        margin-bottom: 4px;
+        strong {
+          margin-right: 4px;
+        }
+        time {
+          @include text-style(12, $primary-third);
+        }
+      }
       position: relative;
       padding-left: 20px;
       p {
@@ -60,6 +75,15 @@
     }
     .qa-card-body {
       .qa-content {
+        &:first-child:not(:last-child) {
+          margin-bottom: 16px;
+        }
+      }
+      .qa-content,
+      .qa-content-answer {
+        .seller {
+          margin-bottom: 8px;
+        }
         padding-left: 24px;
         p {
           @include text-style(14);
