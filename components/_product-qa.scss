@@ -1,0 +1,27 @@
+.product-qa {
+  @include mobile-only {
+    padding-bottom: 0;
+
+    &.is-open {
+      padding-bottom: 20px;
+      .product-section-content,
+      .product-section-header .text-button {
+        display: block;
+      }
+      .product-section-header {
+        i {
+          display: none;
+        }
+      }
+    }
+
+    .product-section-header {
+      .text-button {
+        display: none;
+      }
+    }
+    .product-section-content {
+      display: none;
+    }
+  }
+}

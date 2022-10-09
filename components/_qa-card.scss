@@ -4,6 +4,9 @@
     @include text-style(12, $primary-first);
 
     .detail {
+      .is-answer {
+        color: $blue;
+      }
       color: $primary-first;
       dd::after {
         content: '|';
