@@ -1,6 +1,32 @@
 .user-gallery {
   margin: 0 -15px;
+  .thumbnail-item {
+    &.tns-nav-active {
+      button {
+        border: 3px solid $blue;
+      }
+    }
+    button {
+      @include flexbox;
+      width: 64px;
+      height: 64px;
+      border-radius: 4px;
+      overflow: hidden;
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
   @include responsive(T) {
     margin: 0;
+    .thumbnail-item {
+      button {
+        width: 75px;
+        height: 75px;
+      }
+    }
   }
 }

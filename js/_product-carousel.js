@@ -1,5 +1,5 @@
 const productCarousel = tns({
-  container: '.product-carousel .slider-list',
+  container: '.product-carousel-slider .slider-list',
   items: 1,
   slideBy: 'page',
   autoplay: true,
