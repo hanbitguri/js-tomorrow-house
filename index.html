@@ -516,6 +516,7 @@
               </div>
             </form>
           </div>
+
         </div>
       </div>
       <div class="product-tab">
@@ -592,23 +593,32 @@
               </header>
            
               <div class="product-section-content">
-                <ol class="">
-                  <li>
-                    <div class="gallery-card">
-                      <figure class="gallery-card-image">
-                        <img src="./assets/images/img-review-01.jpg" alt="">
-                        <figcaption class="visually-hidden">스타일링샷1</figcaption>
-                      </figure>
-                      <div class="gallery-card-detail">
-                      <a class="avatar-32">
-                        <img src="./assets/images/img-user-02.jpg" alt="사딸라아저씨" />
-                      </a>
-                      <a href="" class="user-name">전한빛</a>
-                      <span class="order">1/161</span>
-                    </div>
-                    </div>
-                  </li>
-                </ol>
+                <div class="user-gallery" role="region">
+                  <div class="user-gallery-slider">
+                    <ol class="slider-list">
+                      <li class="slider-item">
+                        <div class="gallery-card">
+                          <figure class="gallery-card-image">
+                            <img src="./assets/images/img-review-01.jpg" alt="">
+                            <figcaption class="visually-hidden">스타일링샷1</figcaption>
+                          </figure>
+                          <div class="gallery-card-detail">
+                          <a class="avatar-32">
+                            <img src="./assets/images/img-user-02.jpg" alt="사딸라아저씨" />
+                          </a>
+                          <a href="" class="user-name">전한빛</a>
+                          <span class="order">1/161</span>
+                        </div>
+                        </div>
+                       
+                      </li>
+                    </ol>    
+                  </div>
+                  <div class="user-gallery-thumbnail">
+
+                  </div>
+                </div>
+                
               </div>
             </section>
        
@@ -1427,9 +1437,8 @@
           
               </div>
             </div>
-          </div>
-        </div>
       </div>
+        
     </main>
 
     <!-- footer -->
@@ -1634,6 +1643,7 @@
 
     <!-- overlay -->
     <div class="overlay" aria-hidden></div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./js/_product-carousel.js"></script>
   </body>
