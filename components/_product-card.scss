@@ -4,6 +4,7 @@
     overflow: hidden;
     margin-bottom: 8px;
     img {
+      transition: transform 200ms ease-in-out;
       display: block;
       width: 100%;
       height: auto;
