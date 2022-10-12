@@ -22,7 +22,7 @@ const userGallery = tns({
   autoplayHoverPause: true,
   autoplayButtonOutput: false,
   loop: false,
-  controls: true,
+  controls: false,
   gutter: 4,
   edgePadding: 16,
   navAsThumbnails: true,
@@ -33,7 +33,7 @@ const userGallery = tns({
     768: {
       gutter: 6,
       controls: true,
-      edgePadding: 32,
+      edgePadding: 20,
     },
   },
 })

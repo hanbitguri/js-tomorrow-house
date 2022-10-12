@@ -1,6 +1,12 @@
 .user-gallery {
   margin: 0 -15px;
+  .thumbnail-list {
+    margin-top: 4px;
+    @include flexbox(start);
+    padding-left: 2px;
+  }
   .thumbnail-item {
+    margin-right: 4px;
     &.tns-nav-active {
       button {
         border: 3px solid $blue;
@@ -20,6 +26,9 @@
       }
     }
   }
+  .thumbnail-item:last-child {
+    margin-right: 0;
+  }
   @include responsive(T) {
     margin: 0;
     .thumbnail-item {
@@ -27,6 +36,12 @@
         width: 75px;
         height: 75px;
       }
+    }
+    .thumbnail-list {
+      padding: 0;
+    }
+    .user-gallery-slider {
+      margin-bottom: 6px;
     }
   }
 }
