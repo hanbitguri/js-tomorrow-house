@@ -1,0 +1,42 @@
+.product-user-gallery {
+  .gallery-card-image {
+    overflow: hidden;
+    border-radius: 4px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .gallery-card {
+    position: relative;
+    border-radius: 4px;
+  }
+  .gallery-card-detail {
+    height: 54px;
+    padding: 0 16px;
+    @include flexbox(start);
+    background-color: rgba($black, 0.4);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    .avatar-32 {
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+    .user-name {
+      @include truncate;
+
+      @include text-style(16, $white);
+      font-weight: 700;
+      flex-grow: 1;
+      padding-right: 4px;
+    }
+    .order {
+      @include text-style(16, $white);
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+  }
+}

@@ -11,6 +11,7 @@
 @import './mixins/scrollbar';
 @import './base/nomalize';
 
+@import './mixins/truncate';
 @import './components/product-section';
 @import './base/reset';
 @import './layouts/grids';
@@ -56,6 +57,7 @@
 @import './components/product-shipment';
 @import './components/product-card';
 @import './components/product-recog';
+@import './components/user-gallery';
 * {
   font-family: 'Noto Sans KR', sans-serif;
 }
