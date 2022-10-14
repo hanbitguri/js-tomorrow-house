@@ -32,6 +32,9 @@
       flex-shrink: 0;
     }
     .user-name {
+      &:hover {
+        opacity: 0.4;
+      }
       @include truncate;
 
       @include text-style(16, $white);

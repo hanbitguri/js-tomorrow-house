@@ -34,6 +34,7 @@
     }
   }
   @include responsive(T) {
+    margin-bottom: 40px;
     position: sticky;
     top: $lnb-height-md + $gnb-height-md;
     background-color: $background;

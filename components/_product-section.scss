@@ -23,4 +23,8 @@
   height: 8px;
 
   background-color: $border;
+
+  &.is-big {
+    height: 16px;
+  }
 }

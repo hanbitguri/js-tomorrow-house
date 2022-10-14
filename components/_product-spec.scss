@@ -37,4 +37,7 @@
       width: 100%;
     }
   }
+  @include responsive(T) {
+    padding-top: 0;
+  }
 }
