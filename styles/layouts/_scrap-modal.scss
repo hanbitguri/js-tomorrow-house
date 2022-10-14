@@ -1,0 +1,77 @@
+.scrap-modal {
+  @include flexbox(between);
+  display: none;
+  background-color: $white;
+  height: 56px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: $popup-shadow;
+  padding: 12px 12px;
+
+  i {
+    font-size: 20px;
+    margin-right: 4px;
+    &:active {
+      opacity: 0.4;
+    }
+  }
+  p,
+  a,
+  button {
+    @include text-style(13);
+  }
+  p {
+    font-weight: 400;
+    flex-grow: 1;
+  }
+  a {
+    margin-right: 4px;
+  }
+  .button-group {
+    @include flexbox(end);
+  }
+
+  z-index: $scrap-modal-level;
+  &.is-active {
+    display: flex;
+  }
+  animation: scrap-ani;
+  animation-duration: 300ms;
+
+  @include responsive(D) {
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: $popup-shadow;
+    max-width: 480px;
+    @include pos-center-x(fixed);
+    bottom: 40px;
+    padding: 24px 16px;
+    i {
+      font-size: 24px;
+      margin-right: 8px;
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+    p,
+    a,
+    button {
+      @include text-style(16);
+    }
+    a {
+      margin-right: 8px;
+    }
+  }
+}
+
+@keyframes scrap-ani {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
