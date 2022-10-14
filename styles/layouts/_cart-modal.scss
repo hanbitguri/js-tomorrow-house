@@ -1,4 +1,8 @@
 .cart-modal {
+  display: none;
+  &.is-open {
+    display: block;
+  }
   width: calc(100vw - 30px);
   max-width: 360px;
   overflow: hidden;
