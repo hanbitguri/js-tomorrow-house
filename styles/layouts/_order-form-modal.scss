@@ -1,5 +1,9 @@
 .order-form-modal {
+  max-height: 75vh;
+  overflow-y: auto;
   display: none;
+  overscroll-behavior: contain;
+
   &.is-open {
     display: block;
     animation: modal-fade-in;
