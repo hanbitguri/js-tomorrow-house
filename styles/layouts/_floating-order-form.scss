@@ -1,5 +1,10 @@
 .floating-order-form {
-  height: 700px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  min-height: calc(100vh - 394px);
+  max-height: calc(100vh - #{$global-header-height});
+  position: sticky;
+  top: $global-header-height;
   @include flexbox(start, start);
   flex-direction: column;
   > * {
