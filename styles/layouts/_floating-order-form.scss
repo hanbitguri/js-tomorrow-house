@@ -1,0 +1,40 @@
+.floating-order-form {
+  height: 700px;
+  @include flexbox(start, start);
+  flex-direction: column;
+  > * {
+    width: 100%;
+  }
+  .order-checkout {
+    overflow: auto;
+    flex-grow: 1;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  #floating-order-form-select-1 {
+    margin-bottom: 8px;
+  }
+  #floating-order-form-select-2 {
+    margin-bottom: 8px;
+  }
+  .order-buttons {
+    .bookmark-button {
+      width: 55px;
+      height: 55px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border-radius: 4px;
+      border: 1px solid $border;
+      &:hover {
+        i {
+          color: $blue;
+        }
+      }
+      i {
+        transition: color 200ms ease-in-out;
+        font-size: 32px;
+      }
+    }
+  }
+}

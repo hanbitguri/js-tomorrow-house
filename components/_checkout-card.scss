@@ -1,7 +1,6 @@
 .order-checkout {
   border-radius: 4px;
-  background-color: $background;
-  padding: 8px 10px 8px 12px;
+
   margin-bottom: 12px;
   &:last-child {
     margin-bottom: 0px;
@@ -10,6 +9,9 @@
     .checkout-item {
       margin-bottom: 12px;
       .checkout-card {
+        background-color: $background;
+        border-radius: 4px;
+        padding: 8px 12px 8px 10px;
         position: relative;
         .checkout-header {
           margin-bottom: 8px;
@@ -24,8 +26,8 @@
             width: 20px;
             height: 20px;
             position: absolute;
-            top: 0px;
-            right: 0px;
+            top: 10px;
+            right: 5px;
             font-size: 20px;
             color: $primary-second;
           }
