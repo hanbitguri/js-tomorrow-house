@@ -1,6 +1,4 @@
 .order-form {
-  margin-top: 20px;
-  margin-bottom: 40px;
   .order-inputs {
     .form-select {
       @include text-style(16);
@@ -13,6 +11,10 @@
     #select-2 {
       margin-bottom: 20px;
     }
+  }
+  @include responsive(D) {
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }
 .order-sumary-list {
