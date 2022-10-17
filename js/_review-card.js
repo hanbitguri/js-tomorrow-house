@@ -1,22 +1,49 @@
-const reviewCardFooter = document.querySelector('.review-card-footer')
-const reviewLikeButton = reviewCardFooter.querySelector('button')
-const reviewLikeCount = reviewCardFooter.querySelector('p strong span')
-function toggleLikeButton() {
-  reviewLikeButton.classList.toggle('btn-outlined')
-  reviewLikeButton.classList.toggle('btn-primary')
+const reviewLikeButtonList = document.querySelectorAll(
+  '.review-card-footer button'
+)
 
-  const isLiked = reviewLikeButton.classList.contains('btn-primary')
-  const HELPFUL = '도움됨'
-  const NOT_HELPFUL = '도움이 돼요'
-  //const checkIcon = `<i class="ic-check" aria-hidden></i>` 1. 리터럴로 때려박는 방법
+const HELPFUL = '도움됨'
+const NOT_HELPFUL = '도움이 돼요'
+
+function toggleLikeButton() {
+  const isLiked = this.classList.contains('btn-primary')
+  const textElement = this.nextElementSibling
+  const reviewCardFooter = this.parentNode
+  const checkIcon = `<i class="ic-check" aria-hidden></i>`
+
   if (isLiked) {
-    const check = document.createElement('i')
-    check.classList.add('ic-check')
-    check.setAttribute('aria-hidden')
-    this.innerHTML = HELPFUL
-    this.prepend(check)
+    this.innerHTML = NOT_HELPFUL
   } else {
-    reviewLikeButton.innerHTML = NOT_HELPFUL
+    this.innerHTML = checkIcon + HELPFUL
   }
+
+  if (textElement) {
+    const countSpan = textElement.querySelector('span')
+    const count = Number(countSpan.innerHTML.replaceAll(',', ''))
+    let newCount = count
+    if (isLiked) {
+      newCount -= 1
+      if (newCount === 0) {
+        reviewCardFooter.removeChild(textElement)
+      } else {
+        countSpan.innerHTML = newCount.toLocaleString()
+      }
+    } else {
+      newCount += 1
+      countSpan.innerHTML = newCount.toLocaleString()
+    }
+  } else {
+    if (!isLiked) {
+      const newTextElement = document.createElement('p')
+      newTextElement.innerHTML =
+        '<strong><span>1</span>명</strong>에게 도움이 되었습니다.'
+      reviewCardFooter.appendChild(newTextElement)
+    }
+  }
+  this.classList.toggle('btn-primary')
+  this.classList.toggle('btn-outlined')
 }
-reviewLikeButton.addEventListener('click', toggleLikeButton)
+
+reviewLikeButtonList.forEach((button) => {
+  button.addEventListener('click', toggleLikeButton)
+})
