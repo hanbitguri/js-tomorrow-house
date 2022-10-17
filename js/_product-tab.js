@@ -30,3 +30,29 @@ productTabButtonList.forEach((button) => {
   button.addEventListener('click', clickActiveTab)
   button.addEventListener('click', scrollPanel)
 })
+const productTabPanelIdList = [
+  'product-spec',
+  'product-review',
+  'product-qa',
+  'product-shipment',
+  'product-recog',
+]
+const productTabPanelList = productTabPanelIdList.map((panelId) => {
+  const tabPanel = document.querySelector(`#${panelId}`)
+  return tabPanel
+})
+
+const productTabPanelPositionMap = {}
+
+function detectTabPanelPosition() {
+  productTabPanelList.forEach((tabPanel) => {
+    const id = tabPanel.getAttribute('id')
+    const position = window.scrollY + tabPanel.getBoundingClientRect().top
+    productTabPanelPositionMap[id] = position
+  })
+}
+window.addEventListener('load', detectTabPanelPosition)
+window.addEventListener('resize', detectTabPanelPosition)
+
+// 1481 , 9613 ,11229 , 11930 , 12552
+//
