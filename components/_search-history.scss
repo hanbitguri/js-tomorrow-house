@@ -1,6 +1,8 @@
 .search-history {
   $close-button-size: 32px;
+  width: 262px;
   &-header {
+    flex-shrink: 0;
     margin-top: 20px;
     margin-bottom: 8px;
     @include flexbox(between);
