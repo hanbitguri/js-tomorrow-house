@@ -92,7 +92,7 @@ async function optimizeImageAssets() {
     await imagemin(
       [path.resolve(__dirname, '../assets/images/*.{jpg,png,svg}')],
       {
-        destination: path.join(buildDir, 'assets/images'),
+        destination: path.join(buildDir, './assets/images'),
         plugins: [imageminJpegtran()],
       }
     )
