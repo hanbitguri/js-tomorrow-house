@@ -3,13 +3,19 @@ const productTabButtonList = productTab.querySelectorAll('button')
 const TOP_HEADER_DESKTOP = 80 + 50 + 54
 const TOP_HEADER_MOBILE = 50 + 40 + 40
 let currentActiveTab = productTab.querySelector('.is-active')
-
+let disableUpdate = false
 function clickActiveTab() {
   const tabItem = this.parentNode
   if (currentActiveTab != tabItem) {
+    disableUpdate = true
     tabItem.classList.add('is-active')
+
     currentActiveTab.classList.remove('is-active')
     currentActiveTab = tabItem
+
+    setTimeout(() => {
+      disableUpdate = false
+    }, 1000)
   }
 }
 function scrollPanel() {
@@ -50,8 +56,12 @@ function detectTabPanelPosition() {
     const position = window.scrollY + tabPanel.getBoundingClientRect().top
     productTabPanelPositionMap[id] = position
   })
+  updateActiveTabonScroll()
 }
 function updateActiveTabonScroll() {
+  if (disableUpdate) {
+    return
+  }
   const scrolledAmount =
     window.scrollY +
     (window.innerWidth >= 768 ? TOP_HEADER_DESKTOP + 80 : TOP_HEADER_MOBILE + 8)
@@ -69,6 +79,7 @@ function updateActiveTabonScroll() {
   } else {
     newActiveTab = productTabButtonList[0]
   }
+
   if (newActiveTab) {
     newActiveTab = newActiveTab.parentNode
     if (newActiveTab != currentActiveTab) {
@@ -79,5 +90,6 @@ function updateActiveTabonScroll() {
   }
 }
 window.addEventListener('load', detectTabPanelPosition)
+
 window.addEventListener('resize', detectTabPanelPosition)
 window.addEventListener('scroll', updateActiveTabonScroll)
