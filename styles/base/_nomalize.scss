@@ -24,6 +24,12 @@ html {
 body {
   margin: 0;
 }
+//좌 우 안움직이게
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
 /**
    * Render the `main` element consistently in IE.
