@@ -27,8 +27,10 @@ body {
 //좌 우 안움직이게
 html,
 body {
-  overflow-x: hidden;
-  width: 100%;
+  @include mobile-only {
+    overflow-x: hidden;
+    width: 100%;
+  }
 }
 
 /**

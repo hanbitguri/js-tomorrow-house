@@ -31,11 +31,11 @@
       flex-grow: 0;
       border-radius: 4px;
       border: 1px solid $border;
-      &:hover {
-        i {
-          color: $blue;
-        }
+      &.is-active {
+        background-color: $blue;
+        color: $white;
       }
+
       i {
         transition: color 200ms ease-in-out;
         font-size: 32px;

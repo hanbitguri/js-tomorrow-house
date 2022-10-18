@@ -37,8 +37,8 @@
   &.is-active {
     display: flex;
   }
-  animation: scrap-ani;
-  animation-duration: 300ms;
+  // animation: scrap-ani;
+  // animation-duration: 1000ms;
 
   @include responsive(D) {
     height: 80px;
@@ -70,6 +70,9 @@
 @keyframes scrap-ani {
   0% {
     transform: translate3d(0, 100%, 0);
+  }
+  50% {
+    transform: translate3d(0, 50%, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);
