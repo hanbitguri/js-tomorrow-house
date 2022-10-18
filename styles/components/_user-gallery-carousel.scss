@@ -1,0 +1,91 @@
+.user-gallery {
+  overflow: hidden;
+  margin: 0 -15px;
+}
+.user-gallery-slider {
+  position: relative;
+}
+.user-gallery-controls {
+  width: 100%;
+  @include pos-center;
+  @include flexbox(between);
+  .control-button {
+    &[disabled] {
+      visibility: hidden;
+    }
+    background-color: $white;
+    @include flexbox;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    color: $primary-first;
+    transition: background-color 200ms ease-in-out;
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+    &.is-prev {
+      i {
+        transform: rotate(90deg);
+      }
+    }
+    &.is-next {
+      i {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
+.thumbnail-list {
+  overflow-x: auto;
+  margin-top: 4px;
+  @include flexbox(start);
+  padding-left: 2px;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+.thumbnail-item {
+  margin-right: 4px;
+  &.tns-nav-active {
+    button {
+      border: 3px solid $blue;
+    }
+  }
+  button {
+    @include flexbox;
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    overflow: hidden;
+    img {
+      display: block;
+      width: 64px;
+      height: 64px;
+      object-fit: cover;
+    }
+  }
+}
+.thumbnail-item:last-child {
+  margin-right: 0;
+}
+@include responsive(T) {
+  margin: 0;
+  .thumbnail-item {
+    button {
+      width: 75px;
+      height: 75px;
+      img {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
+  .thumbnail-list {
+    padding: 0;
+  }
+  .user-gallery-slider {
+    margin-bottom: 6px;
+  }
+}

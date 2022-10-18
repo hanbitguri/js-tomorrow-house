@@ -1,0 +1,37 @@
+.breadcrumb {
+  @include flexbox(start);
+  @include text-style(13, $primary-second);
+  font-weight: 400;
+  padding: 10px 0;
+
+  flex-wrap: wrap;
+  .ic-chevron {
+    display: block;
+    font-size: 12px;
+    color: $primary-second;
+    transform: rotate(-90deg);
+  }
+  a {
+    padding: 0 2px;
+  }
+  a:first-child {
+    padding-left: 0;
+  }
+  @include responsive(T) {
+    padding: 16px 0;
+    @include text-style(14, $primary-second);
+    a {
+      padding: 0 4px;
+    }
+  }
+  @include responsive(D) {
+    padding-top: 24px;
+    padding-bottom: 40px;
+    a {
+      transition: color 200ms ease-in-out;
+    }
+    a:hover {
+      color: $primary-third;
+    }
+  }
+}

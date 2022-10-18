@@ -1,0 +1,93 @@
+.review-card {
+  padding: 20px 0;
+  .review-card-header {
+    @include flexbox(start);
+    .avatar-24,
+    .user-name {
+      &:active {
+        opacity: 0.4;
+      }
+    }
+    .avatar-24 {
+      margin-right: 8px;
+    }
+    .user-name {
+      @include text-style(13, $primary-first);
+      strong {
+        font-weight: 400;
+      }
+    }
+    .detail {
+      @include flexbox(start);
+      @include text-style(12, $primary-second);
+      .star-rating-13 {
+        margin-right: 4px;
+      }
+      time::after {
+        content: '·';
+      }
+    }
+    margin-bottom: 20px;
+  }
+  .review-img {
+    margin-bottom: 8px;
+    overflow: hidden;
+    width: 64px;
+    height: 64px;
+    border-radius: 4px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  .review-card-body-content {
+    @include text-style(13, $primary-first);
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  .review-card-footer {
+    @include flexbox(start);
+    button {
+      margin-right: 8px;
+      width: 120px;
+      i {
+        color: $white;
+        font-size: 20px;
+        margin-right: 4px;
+        margin-left: -4px; // 시각적으로 그냥 -4px한거임
+      }
+    }
+    p {
+      @include text-style(12, $primary-first);
+      strong {
+        font-weight: 400;
+        span {
+          font-weight: 700;
+          color: $dark;
+        }
+      }
+    }
+  }
+  @include responsive(T) {
+    padding: 40px 0 40px 32px;
+
+    .review-card-header {
+      margin-left: -32px;
+
+      .user-name :hover {
+        opacity: 0.4;
+      }
+    }
+    .review-card-body-content {
+      @include text-style(14);
+    }
+    .review-img {
+      margin-bottom: 16px;
+      width: 122px;
+      height: 122px;
+    }
+  }
+}
